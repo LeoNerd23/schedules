@@ -1,24 +1,26 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import "./fonts.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import React from 'react'
+import type { Metadata } from 'next'
+import { ThemeProvider } from '@/components/theme-provider'
+
+import './globals.css'
+
 export const metadata: Metadata = {
-  title: "Gym Manneger",
-  description: "Gym Manneger",
-};
+  title: 'Agendamento',
+  description: 'Agendamento',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body>
+    <html lang="pt-BR" className='h-full'>
+      <body className='h-full'>
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
