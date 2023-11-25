@@ -62,7 +62,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
   useEffect(() => {
     if (user) {
-      router.push("/teste");
+      router.push("/admin");
     }
   }, [user, router]);
 

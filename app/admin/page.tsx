@@ -26,9 +26,9 @@ export default function CardWithForm() {
   }, [router]);
 
   return (
-    <main>
-      <div>
-          <p>Olá, <strong>{user?.email}</strong> você está logado</p>
+    <main className="h-full">
+      <div className="h-full flex flex-col justify-center items-center px-4 gap-8">
+          <p className="text-center">Olá, <strong>{user?.email}</strong> você está logado</p>
           <Button onClick={() => logOut()}>Sair</Button>
       </div>
     </main>
