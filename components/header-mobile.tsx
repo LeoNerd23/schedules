@@ -15,14 +15,14 @@ export default function HeaderMobile() {
     <div className="flex w-full justify-end items-center h-14 px-4 gap-4">
       {isCreateAccountPage ? (
         <Link href="/">
-        <Button variant="outline" size="icon">
-          <User />
+        <Button variant="outline" className="gap-1">
+          Login <User />
         </Button>
     </Link>
       ) : (
         <Link href="/create-account">
-            <Button variant="outline" size="icon">
-              <UserPlus />
+            <Button variant="outline" className="gap-1">
+              Cadastro <UserPlus />
             </Button>
         </Link>
       )}
