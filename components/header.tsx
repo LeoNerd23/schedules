@@ -12,7 +12,7 @@ export default function HeaderMobile() {
   const isCreateAccountPage = path === "/create-account";
 
   return (
-    <div className="flex w-full justify-end items-center h-14 px-4 gap-4">
+    <div className="flex w-full justify-end items-center h-14 px-4 gap-4 lg:container">
       {isCreateAccountPage ? (
         <Link href="/">
         <Button variant="outline" className="gap-1">

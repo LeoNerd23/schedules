@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
-import HeaderMobile from "@/components/header-mobile";
+import HeaderMobile from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Agendamento",

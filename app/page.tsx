@@ -12,8 +12,8 @@ import {
 export default function LoginPage() {
   return (
     <>
-      <main className="h-full px-4">
-        <Card>
+      <main className="px-4 sm:px-0 lg:container">
+        <Card className="max-w-md my-0 mx-auto">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl">Faça seu login</CardTitle>
             <CardDescription>
