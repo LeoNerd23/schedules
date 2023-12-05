@@ -20,12 +20,7 @@ import {
   onAuthChanged,
 } from "@/utils/firebase/authService";
 
-interface CreateAccountProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export default function CreateAccount({
-  className,
-  ...props
-}: CreateAccountProps) {
+export default function CreateAccount() {
   const [user, setUser] = useState<User | null>();
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
