@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, signOut, onAuthStateChanged, User } from 'firebase/auth'
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged, User, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { auth } from './fireBaseService'
 
 export async function login(email:string, pass: string) {
@@ -11,4 +11,9 @@ export async function logOut() {
 
 export function onAuthChanged(callback: (user: User | null) => void ) {
   return onAuthStateChanged(auth, callback)
+}
+
+export function logWithGoogle() {
+  const provider = new GoogleAuthProvider()
+  return signInWithPopup(auth, provider)
 }

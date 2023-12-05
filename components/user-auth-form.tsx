@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FormEvent, useEffect, useState } from "react";
-import { login, onAuthChanged } from "@/utils/firebase/authService";
+import { logWithGoogle, login, onAuthChanged } from "@/utils/firebase/authService";
 import { User } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
@@ -116,7 +116,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           </span>
         </div>
       </div>
-      <Button type="submit" variant="outline" disabled={isLoading}>
+      <Button type="submit" variant="outline" disabled={isLoading} onClick={logWithGoogle}>
         {isLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
